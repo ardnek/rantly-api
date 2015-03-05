@@ -7,6 +7,8 @@ gem 'rails', '4.2.0'
 gem 'pg'
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'rack-cors', require: 'rack/cors'
+gem 'bcrypt'
+gem 'faker'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
