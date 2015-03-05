@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
+Rant.delete_all
 
 User.create!(
   first_name: "Admin",
@@ -13,6 +14,21 @@ User.create!(
   email: "admin@example.com",
   password: "password"
 )
+
+ranter = User.create!(
+  first_name: "Randy",
+  last_name: "Ranty",
+  email: "user@example.com",
+  password: "password"
+)
+
+5.times do |i|
+  Rant.create!(
+    title: Faker::Lorem.word,
+    body: Faker::Lorem.paragraph,
+    user_id: ranter.id
+    )
+end
 
 10.times do |i|
   User.create!(
