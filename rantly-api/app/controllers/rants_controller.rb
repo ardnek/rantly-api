@@ -37,7 +37,6 @@ class RantsController < ApplicationController
       render json: @rant
   end
 
-
   private
 
   def set_user
